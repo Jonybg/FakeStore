@@ -14,7 +14,7 @@ export const NavBar = () => {
     };
 
     return (
-        <nav className='h-20'>
+        <nav className='h-auto'>
             <div className='m-3 flex justify-between items-center mt-10'>
                 <div className={`flex items-center xl:ml-32 ml-0 gap-44 ${menu ? "menu-open" : ""}`}>
                     <span className='text-4xl font-bold'>Trendify</span>
