@@ -15,7 +15,7 @@ export const CardProduct = ({ product }) => {
                 </div>
             </div>
             <h2 className="text-lg font-semibold">{product.title}</h2>
-            <p className="text-gray-600">{product.price}</p>
+            <p className="text-gray-600"> <span className=' text-lg font-bold' >Price:</span> {product.price}</p>
         </div>
     );
 };
