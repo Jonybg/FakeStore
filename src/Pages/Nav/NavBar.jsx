@@ -18,7 +18,7 @@ export const NavBar = () => {
             <div className='m-3 flex justify-between items-center mt-10'>
                 <div className={`flex items-center xl:ml-32 ml-0 gap-44 ${menu ? "menu-open" : ""}`}>
                     <span className='text-4xl font-bold'>Trendify</span>
-                    <ul className={`nav-list xl:flex flex gap-5 text-xl cursor-pointer ${menu ? "flex" : "hidden"}`}>
+                    <ul className={`nav-list xl:flex flex-col xl:flex-row gap-5 text-xl cursor-pointer ${menu ? "flex" : "hidden"}`}>
                         <li className='flex gap-3 items-center'>
                             {menu ? <FaHome /> : ""}
                             Home
