@@ -23,6 +23,27 @@
 
 }
 
+.cart {
+  position: fixed;
+  top: 90px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: auto;
+  z-index: 1;
+}
+
+
+
+.blur-background {
+  backdrop-filter: blur(8px);
+
+}
+
 
 
 @media (max-width: 1280px) {
@@ -42,6 +63,7 @@
   ul li {
     padding-left: 30px;
     padding-top: 30px;
+    border: none;
   }
 
 

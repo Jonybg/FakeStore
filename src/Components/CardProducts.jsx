@@ -14,7 +14,7 @@ export const CardProduct = ({ product }) => {
                     <IoAddCircleSharp className="text-4xl cursor-pointer text-white" />
                 </div>
             </div>
-            <h2 className="text-lg font-semibold">{product.title}</h2>
+            <h2 className="text-lg font-semibold">Hola</h2>
             <p className="text-gray-600"> <span className=' text-lg font-bold' >Price:</span> {product.price}</p>
         </div>
     );

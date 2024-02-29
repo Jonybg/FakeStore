@@ -6,6 +6,8 @@ import { Outstanding } from './Pages/Outstanding/Outstanding'
 import { Products } from './Pages/Products/Products'
 import { Footer } from './Pages/Footer/Footer'
 import { ContactForm } from './Pages/Contact/ContactForm'
+import { ContextProduct } from './Context/ProductsContext'
+import { ContextCart } from './Context/CartContext'
 
 
 
@@ -15,14 +17,17 @@ import { ContactForm } from './Pages/Contact/ContactForm'
 export const App = () => {
   return (
     <>
-      <NavBar />
-      <Hero />
-      <Info />
-      <Outstanding />
-      <Products />
-      <ContactForm />
-      <Footer />
+      <ContextProduct>
+        <ContextCart>
+          <NavBar />
+          <Hero />
+          <Info />
+          <Outstanding />
+          <Products />
+          <ContactForm />
+          <Footer />
+        </ContextCart>
+      </ContextProduct>
     </>
-
   )
 }

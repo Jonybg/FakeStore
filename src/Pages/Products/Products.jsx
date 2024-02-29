@@ -1,31 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { IoAddCircleSharp } from "react-icons/io5";
+import React, { useContext } from 'react';
 import { FaArrowDownLong } from "react-icons/fa6";
 import { CardProduct } from '../../Components/CardProducts';
+import { ProductsContext } from '../../Context/ProductsContext';
 
 export const Products = () => {
-    const [data, setData] = useState([]);
-    const [visibleProducts, setVisibleProducts] = useState(12);
-    const [totalProducts, setTotalProducts] = useState(0);
 
-    const fetchData = async () => {
-        const response = await fetch("https://fakestoreapi.com/products");
-        const data = await response.json();
-        setTotalProducts(data.length);
-        setData(data);
-    };
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    const { data, visibleProducts, totalProducts, loadLessProducts, loadMoreProducts } = useContext(ProductsContext)
 
-    const loadMoreProducts = () => {
-        setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 4);
-    };
-
-    const loadLessProducts = () => {
-        setVisibleProducts(prevVisibleProducts => prevVisibleProducts - 4)
-    }
 
     return (
         <div className='mt-32 flex flex-col gap-12'>
