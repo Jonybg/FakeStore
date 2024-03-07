@@ -7,6 +7,7 @@ import ARG from "../../assets/Nav/argentina.png"
 import { IoMdClose } from "react-icons/io";
 import { CartContext } from '../../Context/CartContext';
 import { CartProducts } from '../../Components/CartProducts';
+import { Link } from "react-scroll";
 
 
 export const NavBar = () => {
@@ -36,7 +37,6 @@ export const NavBar = () => {
     const handleBuy = () => {
         setShowConfirmationModal(true);
         setShowThanksMessage(true);
-
     };
 
     const handleConfirmation = (confirmed) => {
@@ -45,7 +45,6 @@ export const NavBar = () => {
         }
         setShowConfirmationModal(false);
         toggleCart(false)
-
     };
 
     const handledecline = () => {
@@ -62,29 +61,36 @@ export const NavBar = () => {
             {Cart && <div className="blur-background absolute top-[100px] left-0 w-full h-full"></div>}
             <div className='m-3 flex justify-between items-center mt-6'>
                 <div className={`flex items-center xl:ml-32 ml-0 gap-44 ${menu ? "menu-open" : ""}`}>
-                    <span className='text-4xl font-bold'>Trendify</span>
-                    <ul className={`nav-list xl:flex flex-col xl:flex-row gap-5 text-xl h-full cursor-pointer ${menu ? "flex" : "hidden"}`}>
-                        <li className='hover:border-b-2 border-black flex gap-3 items-center'>
-
-                            {menu ? <FaHome /> : ""}
-                            Home
+                    <span className='cursor-pointer text-4xl font-bold'> <Link to="home" smooth={true} duration={500} offset={-220}>Trendify  </Link></span>
+                    <ul className={`nav-list xl:flex flex-col xl:flex-row gap-5 text-xl h-full   cursor-pointer ${menu ? "flex" : "hidden"}`}>
+                        <Link to="home" smooth={true} duration={500} offset={-220}>
+                            <div className=" xl:mt-0 mt-4 ml-6 flex items-center gap-4">
+                                {menu ? <FaHome /> : ""}
+                                <span>Home</span>
+                            </div>
                             {menu ? <IoIosArrowForward className='ml-auto' /> : ""}
-                        </li>
-                        <li className='hover:border-b-2 border-black flex gap-3 items-center'>
-                            {menu ? <FaInfo /> : ""}
-                            Info
+                        </Link>
+                        <Link to="info" smooth={true} duration={500} offset={-220}>
+                            <div className=" ml-6 flex items-center gap-4">
+                                {menu ? <FaInfo /> : ""}
+                                <span>Info</span>
+                            </div>
                             {menu ? <IoIosArrowForward className='ml-auto' /> : ""}
-                        </li>
-                        <li className='hover:border-b-2 border-black flex gap-3 items-center'>
-                            {menu ? <FaShopify /> : ""}
-                            Shop
+                        </Link>
+                        <Link to="shop" smooth={true} duration={500} offset={-220}>
+                            <div className=" ml-6 flex items-center gap-4">
+                                {menu ? <FaShopify /> : ""}
+                                <span>Shop</span>
+                            </div>
                             {menu ? <IoIosArrowForward className='ml-auto' /> : ""}
-                        </li>
-                        <li className='hover:border-b-2 border-black flex gap-3 items-center'>
-                            {menu ? <FaPhoneAlt /> : ""}
-                            Contact
+                        </Link>
+                        <Link to="contact" smooth={true} duration={500} offset={-220}>
+                            <div className="ml-6 flex items-center gap-4">
+                                {menu ? <FaPhoneAlt /> : ""}
+                                <span>Contact</span>
+                            </div>
                             {menu ? <IoIosArrowForward className='ml-auto' /> : ""}
-                        </li>
+                        </Link>
                         {menu && <hr className="w-full border-gray-300 my-4" />}
                         {menu && (
                             <>

@@ -33,7 +33,7 @@ export const Products = () => {
 
 
     return (
-        <div className='mt-32 flex flex-col gap-12'>
+        <div name="shop" className='mt-32 flex flex-col gap-12'>
             <div className='flex lg:items-start items-center sm:flex-row flex-col justify-between'>
                 <div className="ml-6 mt-4 relative">
                     <select onChange={handleChange} value={categories} className="block appearance-none border border-gray-300 text-xl font-bold py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-gray-400">

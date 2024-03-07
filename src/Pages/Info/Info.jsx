@@ -5,7 +5,7 @@ import { CiSquareCheck } from "react-icons/ci";
 
 export const Info = () => {
     return (
-        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8  ">
+        <div name="info" className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8  ">
             <div className="flex items-center flex-col justify-center text-center gap-6">
                 <div className='bg-[#f4f4f3] w-28 h-28 rounded-[50%] flex items-center justify-center'>
                     <BsTruck className="text-4xl text-blue-500" />
