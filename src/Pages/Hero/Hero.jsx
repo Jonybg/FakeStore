@@ -6,7 +6,7 @@ export const Hero = () => {
     const { Cart } = useContext(CartContext);
 
     return (
-        <div className={`relative ${Cart ? 'filter blur-sm' : ''}`}>
+        <div name="hero" className={`relative `}>
             <div className="bg-hero xl:bg-cover bg-contain bg-no-repeat bg-center h-[20rem] sm:h-[40rem] relative">
                 <img className="hidden xl:block w-full h-full absolute inset-0" src={BG} alt="" />
                 <div className="absolute top-1/2 left-0 ml-2 lg:ml-0 lg:left-1/4 transform -translate-y-1/2">

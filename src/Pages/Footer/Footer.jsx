@@ -7,8 +7,8 @@ export const Footer = () => {
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex flex-col">
                     <p className="text-lg font-bold">Trendify</p>
-                    <p className="text-sm">Tu tienda de moda favorita</p>
-                    <p className="text-sm mt-2">Síguenos en nuestras redes:</p>
+                    <p className="text-sm">Your favorite fashion store</p>
+                    <p className="text-sm mt-2">Follow us on our networks:</p>
                     <div className="flex gap-4 mt-2">
                         <FaFacebook className="h-6 w-6 hover:text-gray-500" />
                         <FaTwitter className="h-6 w-6 hover:text-gray-500" />
@@ -16,8 +16,8 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="flex flex-col">
-                    <a href="#" className="text-sm hover:text-gray-500">Contáctanos</a>
-                    <p className="text-xs mt-1">Lunes a Viernes: 9am - 6pm</p>
+                    <a href="#" className="text-sm hover:text-gray-500">Contact us</a>
+                    <p className="text-xs mt-1">Monday to Friday: 9am - 6pm</p>
                     <p className="text-xs">Email: info@trendify.com</p>
                 </div>
             </div>
