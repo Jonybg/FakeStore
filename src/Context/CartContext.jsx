@@ -87,10 +87,12 @@ export const ContextCart = ({ children }) => {
 
     const toggleMenu = () => {
         setMenu(!menu);
+        setCart(false)
     };
 
     const toggleCart = () => {
         setCart(!Cart);
+        setMenu(false)
     };
 
     return (
